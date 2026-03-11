@@ -27,7 +27,7 @@ const onSearch = () => {
 
 <template>
   <section>
-    <h2>Juegos recientes</h2>
+    <h2 style="text-align: center">Juegos recientes</h2>
     <div class="game-layout">
       <SharedSearch @search="onSearch" v-model="searchInput" id="probando" />
     </div>

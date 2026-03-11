@@ -16,17 +16,20 @@ const onBlur = () => {
 
 const searchClasses = computed(() => {
   return {
-    'search--active': isActive.value
+    'search--active': isActive.value,
   }
 })
-
 </script>
 
 <template>
-  <form @submit.prevent="() => {
-    emit('search', model)
-  }">
-      <div class="search" :class="searchClasses" v-bind="$attrs">
+  <form
+    @submit.prevent="
+      () => {
+        emit('search', model)
+      }
+    "
+  >
+    <div class="search" :class="searchClasses" v-bind="$attrs">
       <input
         v-model="model"
         class="search__input"

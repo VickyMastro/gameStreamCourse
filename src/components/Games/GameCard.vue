@@ -28,7 +28,7 @@ defineProps({
       <div class="game-card__tags">
         <GameTag v-for="tag in game.tags" :key="tag" :tag="tag" />
         <button @click.prevent="modalStore.openModal(game)" class="game-card__video-icon">
-          <IconPlayCircle  />
+          <IconPlayCircle />
         </button>
       </div>
       <p class="game-card__description">{{ game.description }}</p>
@@ -43,6 +43,7 @@ defineProps({
   border-radius: 0.5rem;
   padding: 1rem;
   background-color: #fff;
+  box-sizing: border-box;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 

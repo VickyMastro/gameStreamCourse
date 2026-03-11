@@ -4,8 +4,8 @@ import IconChevronLeft from '../Icons/IconChevronLeft.vue'
 import IconChevronRight from '../Icons/IconChevronRight.vue'
 
 const icons = {
-  'left': IconChevronLeft,
-  'right': IconChevronRight,
+  left: IconChevronLeft,
+  right: IconChevronRight,
 }
 
 const props = defineProps({
@@ -30,10 +30,10 @@ function prevImage() {
   <div class="game-gallery">
     <div class="game-gallery__controls">
       <button class="game-gallery__button game-gallery__button--left" @click="prevImage">
-        <component :is="icons.left" />
+        <component :is="icons['left']"></component>
       </button>
       <button class="game-gallery__button game-gallery__button--right" @click="nextImage">
-        <component :is="icons.right" />
+        <component :is="icons['right']"></component>
       </button>
     </div>
 
